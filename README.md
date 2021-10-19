@@ -5,9 +5,9 @@ Portfolio Helps you to showcase your work to clients
 
 To run this project you have to do few things
 
-####1. Clone this to you local repository
-####2. Run`npm install`
-####3. Run `npm start`
+#### 1. Clone this to you local repository
+#### 2. Run`npm install`
+#### 3. Run `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
