@@ -10,7 +10,7 @@ const Starter = () => {
                             <span className="circle"><i className="icon ion ion-plus"></i></span>
                         </a>
                     </div>
-                    <div className="st-image"><img src="images/man.png" alt=""/></div>
+                    <div className="st-image"><img src="./images/man.png" alt=""/></div>
                     <div className="st-title">Steve Morgan</div>
                     <div className="st-subtitle">UX/UI Designer & Front-end Developer</div>
                     <div className="st-soc">
