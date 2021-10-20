@@ -1,6 +1,10 @@
 import React from 'react';
-
+import useFetch from "../hooks/useFetch";
+import {baseUrl, about, starterApi} from '../apiEndPoint'
 const Contact = () => {
+    const {loading,error,data} = useFetch(about)
+    if (loading)return <p>load...</p>
+    if (data)
     return (
         <div className="section contacts" id="contact-section">
             <div className="title">Contact Me</div>
@@ -9,15 +13,14 @@ const Contact = () => {
                     <div className="content-box animated">
                         <div className="info-list">
                             <ul>
-                                <li><strong><span>Address:</span></strong> 358 W Jefferson St, Bensenville, IL 60112
+                                <li><strong><span>Address:</span></strong> {data.Address}
                                 </li>
-                                <li><strong><span>Phone:</span></strong> <a href="tel:12562548456">+1 256 254 84 56</a>
+                                <li><strong><span>Phone:</span></strong> {data.Phone}
                                 </li>
-                                <li><strong><span>E-mail:</span></strong> <a
-                                    href="mailto:smorgan@domain.com">smorgan@domain.com</a></li>
+                                <li><strong><span>E-mail:</span></strong> {data.Email}</li>
                             </ul>
                         </div>
-                        <div className="map" id="map"></div>
+                        {/*<div className="map" id="map"></div>*/}
                     </div>
                 </div>
                 <div className="col col-m-12 col-t-6 col-d-6">
@@ -51,6 +54,8 @@ const Contact = () => {
         </div>
 
     );
+
+    else return (<></>)
 };
 
 export default Contact;
